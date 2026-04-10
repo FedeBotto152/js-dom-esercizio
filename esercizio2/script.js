@@ -1,23 +1,14 @@
-const input = document.querySelector("input");
-const ul = document.querySelector("ul");
+const firstNameInput = document.getElementById("firstName");
+const lastNameInput = document.getElementById("lastName");
+const ageInput = document.getElementById("age");
+const form = document.getElementById("form");
 
-function addProduct() {
-  const taskText = input.value.trim();
+const person = {
+  firstName: firstNameInput.value,
+  lastName: lastNameInput.value,
+  age: ageInput.value
+};
 
-  if (taskText === "") {
-    return;
-  }
+form.setAttribute("data-person", JSON.stringify(person));
 
-  const li = document.createElement("li");
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-
-  const span = document.createElement("span");
-  span.textContent = taskText;
-
-  li.appendChild(checkbox);
-  li.appendChild(span);
-  ul.appendChild(li);
-
-  input.value = "";
-}
+console.log(person);

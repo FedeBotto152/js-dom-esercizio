@@ -3,15 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
+    <title>Form Person</title>
   </head>
-
   <body>
-    <div>
-      <h1>To-do List</h1>
-      <input type="text" placeholder="Scrivi un task..." />
-      <button onclick="addProduct()">Aggiungi</button>
-      <ul></ul>
+    <div id="container">
+      <form id="form">
+        <div>
+          <label>First Name:</label>
+          <input type="text" class="form-input" id="firstName" value="Mario" />
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input type="text" class="form-input" id="lastName" value="Rossi" />
+        </div>
+        <div>
+          <label>Age:</label>
+          <input type="number" class="form-input" id="age" value="25" />
+        </div>
+      </form>
     </div>
 
     <script src="script.js"></script>
