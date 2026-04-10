@@ -1,8 +1,23 @@
-const paragrafi = document.getElementsByClassName("paragrafo");
-console.log("Paragrafi:", paragrafi);
+const input = document.querySelector("input");
+const ul = document.querySelector("ul");
 
-const elemento3 = document.getElementById("elemento-3");
-console.log("Elemento 3:", elemento3);
+function addProduct() {
+  const taskText = input.value.trim();
 
-const titoli = document.getElementsByTagName("h2");
-console.log("Titoli h2:", titoli);
+  if (taskText === "") {
+    return;
+  }
+
+  const li = document.createElement("li");
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+
+  const span = document.createElement("span");
+  span.textContent = taskText;
+
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  ul.appendChild(li);
+
+  input.value = "";
+}
