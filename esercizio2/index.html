@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lord of the Rings Card</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
 
-        .form {
-            display: flex;
-            flex-direction: column;
-            max-width: 300px;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
+      .card {
+        width: 300px;
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-top: 12px;
+      }
+
+      .card h2 {
+        margin: 0;
+      }
     </style>
-</head>
-<body>
-    <h1>Il form di <span class="title-name"></span></h1>
-
-    <div class="form">
-        <label>Email</label>
-        <input type="email" class="email" placeholder="email">
-
-        <label>Name</label>
-        <input type="text" class="firstname" placeholder="firstname">
-
-        <label>Surname</label>
-        <input type="text" class="lastname" placeholder="lastname">
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="card-name">Caricamento...</h2>
+      <img class="card-image" alt="Carta Il Signore degli Anelli" />
     </div>
 
-    <button class="btn">Salva</button>
-    <p class="printedform"></p>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
