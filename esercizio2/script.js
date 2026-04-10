@@ -5,7 +5,7 @@ const button = document.querySelector(".btn");
 const titleName = document.querySelector(".title-name");
 const printedForm = document.querySelector(".printedform");
 
-const savedData = localStorage.getItem("userForm");
+const savedData = sessionStorage.getItem("userForm");
 
 if (savedData) {
   const user = JSON.parse(savedData);
@@ -29,7 +29,7 @@ button.addEventListener("click", function () {
     lastName: lastNameInput.value
   };
 
-  localStorage.setItem("userForm", JSON.stringify(user));
+  sessionStorage.setItem("userForm", JSON.stringify(user));
 
   titleName.textContent = user.firstName;
 
